@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Carpooling</title>
+  <style>
+    /* CSS styling for the carpooling page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: rgb(20, 79, 15);
+      background-image: url('background-image.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff; /* Set a text color for better visibility */
+    }
+    h1 {
+      color: #fff; /* Set a heading color for better visibility */
+      margin-bottom: 20px;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    label {
+      margin-right: 10px;
+      color: #fff; /* Set a label color for better visibility */
+    }
+    input,
+    select {
+      margin-bottom: 10px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    input[type="submit"] {
+      background-color: #009688;
+      color: #fff;
+      cursor: pointer;
+    }
+    img {
+      max-width: 100%;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Carpooling</h1>
+  <p>FILL OUT THE FORM BELOW TO INTERACT WITH STUDENT DRIVERS!</p>
+
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone" required><br>
+    <!-- Use the "tel" input type for phone number -->
+
+    <label for="pickup">Pickup Location:</label>
+    <select id="pickup" name="pickup">
+      <option value="Accra">Accra</option>
+      <option value="Kumasi">Kumasi</option>
+      <option value="Takoradi">Takoradi</option>
+      <option value="Tamale">Tamale</option>
+      <!-- Add more pickup location options if needed -->
+    </select><br>
+
+    <label for="destination">Destination:</label>
+    <select id="destination" name="destination">
+      <option value="Accra">Accra</option>
+      <option value="Kumasi">Kumasi</option>
+      <option value="Takoradi">Takoradi</option>
+      <option value="Tamale">Tamale</option>
+      <!-- Add more destination options if needed -->
+    </select><br>
+
+    <input type="submit" value="SEND">
+  </form>
+
+  <img src="carpooling-image.jpg" alt="Carpooling Image">
+
+</body>
+</html>
