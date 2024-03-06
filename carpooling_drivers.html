@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carpooling Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(74, 205, 62);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgba(24, 23, 23, 0.824);
+            margin-bottom: 20px;
+        }
+
+        p {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            color: rgb(24, 18, 18);
+            margin-bottom: 8px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Carpooling Page</h1>
+    <p>Fill out the form below to register as a student driver.</p>
+
+    <form action="thank_you.html" method="post">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" name="phone" id="phone" required>
+
+        <label for="car_model">Car Model:</label>
+        <input type="text" name="car_model" id="car_model" required>
+
+        <label for="car_capacity">Car Capacity:</label>
+        <input type="text" name="car_capacity" id="car_capacity" required>
+
+        <label for="timetable">Timetable:</label>
+        <input type="file" id="timetable" name="timetable" accept=".pdf, .doc, .docx"><br>
+        <!-- Use the "file" input type to allow file uploads -->
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

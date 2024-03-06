@@ -8,7 +8,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 20px;
-      background-color: rgb(65, 162, 56);
+      background-color: rgb(20, 79, 15);
       background-image: url('background-image.jpg');
       background-size: cover;
       background-position: center;
@@ -49,12 +49,27 @@
       border-radius: 5px;
     }
   </style>
+  <script>
+    function validateForm() {
+      var pickupLocation = document.getElementById("pickup-location").value;
+      var destination = document.getElementById("destination").value;
+      var errorMessage = document.getElementById("error-message");
+
+      if (pickupLocation === destination) {
+        errorMessage.textContent = "Pickup location and destination cannot be the same.";
+        return false;
+      } else {
+        errorMessage.textContent = "";
+        return true;
+      }
+    }
+  </script>
 </head>
 <body>
   <h1>Carpooling</h1>
   <p>FILL OUT THE FORM BELOW TO INTERACT WITH STUDENT DRIVERS!</p>
 
-  <form action="https://formspree.io/f/mrgwonvk" method="post">
+  <form onsubmit="return validateForm()" action="thank_you2.html" method="post">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required><br>
 
@@ -69,6 +84,7 @@
       <option value="Bani Hostel">Bani Hostel</option>
       <option value="Evandy Hostel">Evandy Hostel</option>
       <option value="Top Nelson Yankah Hall">Top Nelson Yankah Hall</option>
+      </optgroup>
       <optgroup label="Lecture Halls">
       <option value="Great Hall">Great Hall</option>
       <option value="Balme Library Lecture Theater">Balme Library Lecture Theater</option>
@@ -81,6 +97,7 @@
       <option value="Geography Department Lecture Theater">Geography Department Lecture Theater</option>
       <option value="Sociology Department Lecture Theater">Sociology Department Lecture Theater</option>
       <!-- Add more pickup location options if needed -->
+      </optgroup>
     </select><br>
 
     <label for="destination">Destination:</label>
@@ -90,28 +107,29 @@
       <option value="Bani Hostel">Bani Hostel</option>
       <option value="Evandy Hostel">Evandy Hostel</option>
       <option value="Top Nelson Yankah Hall">Top Nelson Yankah Hall</option>
+      </optgroup>
       <optgroup label="Lecture Halls">
-      <option value="Great Hall">Great Hall</option>
-      <option value="Balme Library Lecture Theater">Balme Library Lecture Theater</option>
-      <option value="J.B. Danquah Conference Center">J.B. Danquah Conference Center</option>
-      <option value="School of Performing Arts (S.P.A) Lecture Theater">School of Performing Arts (S.P.A) Lecture Theater</option>
-      <option value="Chemistry Auditorium">Chemistry Auditorium</option>
-      <option value="Physics Auditorium">Physics Auditorium</option>
-      <option value="Economics Department Lecture Theater">Economics Department Lecture Theater</option>
-      <option value="Psychology Department Lecture Theater">Psychology Department Lecture Theater</option>
-      <option value="Geography Department Lecture Theater">Geography Department Lecture Theater</option>
-      <option value="Sociology Department Lecture Theater">Sociology Department Lecture Theater</option>
-      <!-- Add more destination options if needed -->
-    </select><br>
+        <option value="Great Hall">Great Hall</option>
+        <option value="Balme Library Lecture Theater">Balme Library Lecture Theater</option>
+        <option value="J.B. Danquah Conference Center">J.B. Danquah Conference Center</option>
+        <option value="School of Performing Arts (S.P.A) Lecture Theater">School of Performing Arts (S.P.A) Lecture Theater</option>
+        <option value="Chemistry Auditorium">Chemistry Auditorium</option>
+        <option value="Physics Auditorium">Physics Auditorium</option>
+        <option value="Economics Department Lecture Theater">Economics Department Lecture Theater</option>
+        <option value="Psychology Department Lecture Theater">Psychology Department Lecture Theater</option>
+        <option value="Geography Department Lecture Theater">Geography Department Lecture Theater</option>
+        <option value="Sociology Department Lecture Theater">Sociology Department Lecture Theater</option>
+        <!-- Add more destination options if needed -->
+      </select><br>
+  
+      <input type="submit" value="SEND">
+    </form>
+  
+    <img src="carpooling-image.jpg" alt="Carpooling Image">
+  
+  </body>
+  </html>
+        
+     
+        
 
-    <label for="timetable">Timetable:</label>
-    <input type="file" id="timetable" name="timetable" accept=".pdf, .doc, .docx"><br>
-    <!-- Use the "file" input type to allow file uploads -->
-
-    <input type="submit" value="SEND">
-  </form>
-
-  <img src="carpooling-image.jpg" alt="Carpooling Image">
-
-</body>
-</html>
